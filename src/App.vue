@@ -18,7 +18,7 @@ const entrenamientos = ref<Entrenamiento[]>([]);
 const cargando = ref(true);
 const editandoId = ref<string | null>(null);
 
-//Formulario inicial en blanco
+//Formulario inicial en blanco 
 const formulario = ref<Entrenamiento>({
   fecha: '',
   duracion: 0,
@@ -72,7 +72,7 @@ const guardarEntrenamiento = async () => {
 
 //3. Eliminar
 const eliminarEntrenamiento = async (id:string) => {
-  if (confirm("¿Estás seguro de borrar este entrenamiento?:( )")) {
+  if (confirm("¿Estás seguro de borrar este entrenamiento?:(")) {
     try {
       await deleteDoc(doc(db, 'entrenamientos', id));
     } catch (error) {
