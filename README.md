@@ -1,42 +1,50 @@
-# mvt-prueba
+# Prueba Técnica - Registro de Entrenamientos
 
-This template should help get you started developing with Vue 3 in Vite.
+Este repositorio contiene el código desarrollado para la prueba técnica de My Virtual Trainer, correspondiente a la aplicación para la posición de pasante de programación. 
 
-## Recommended IDE Setup
+El proyecto es una aplicación web de una sola página (SPA) que permite a los usuarios gestionar sus sesiones de entrenamiento. Las funcionalidades incluyen el registro, visualización, edición y eliminación de datos, los cuales se sincronizan en tiempo real.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Tecnologías Utilizadas
 
-## Recommended Browser Setup
+* Framework: Vue 3 (implementando la sintaxis moderna de Composition API y <script setup>).
+* Lenguaje: TypeScript para la definición de interfaces y seguridad de tipos.
+* Base de Datos: Firebase Firestore (implementación de operaciones CRUD y onSnapshot para actualizaciones en tiempo real).
+* Diseño: CSS estándar con un enfoque de diseño limpio, minimalista y responsivo.
+* Alojamiento: Firebase Hosting.
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Requisitos Previos
 
-## Type Support for `.vue` Imports in TS
+Para ejecutar este proyecto de manera local, es necesario contar con:
+* Node.js instalado en su entorno de desarrollo.
+* Una cuenta de Firebase con un proyecto y base de datos Firestore inicializada.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Instrucciones de Instalación y Configuración
 
-## Customize configuration
+1. Clonar el repositorio en su máquina local:
+   git clone https://github.com/alejo000111/mvt-prueba
+   cd mvt-prueba
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+2. Instalar las dependencias del proyecto:
+  npm install
 
-## Project Setup
+3. Configurar la conexión a Firebase:
+Crear un archivo llamado "firebase.ts" dentro de la carpeta "src". En este archivo, es necesario inicializar la aplicación de firebase con sus propias credenciales de proyecto y exportar el servicio de Firestore (variable db).
 
-```sh
-npm install
-```
+4. Ejecutar el servidor de desarrollo:
+  npm run dev
 
-### Compile and Hot-Reload for Development
+## Instrucciones de Construcción y Despliegue
 
-```sh
-npm run dev
-```
+Este proyecto está configurado para ser desplegado en Firebase Hosting.
 
-### Type-Check, Compile and Minify for Production
+1. Para compilar la aplicación y prepararla para producción, ejecute:
+  npm run build
+Este comando generará una carpeta llamada "dist" que contiene los archivos optimizados.
 
-```sh
-npm run build
-```
+2. Para desplegar la aplicación, utilice las herramientas de línea de comandos de Firebase:
+  firebase login
+  firebase init hosting
+Asegurar que durante la configuración esté seleccionada la carpeta "dist" como su directorio público
+
+3. Finalmente suba los archivos a producción
+  firebase deploy
