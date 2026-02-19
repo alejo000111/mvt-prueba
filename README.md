@@ -6,7 +6,7 @@ El proyecto es una aplicación web de una sola página (SPA) que permite a los u
 
 ## Tecnologías Utilizadas
 
-* Framework: Vue 3 (implementando la sintaxis moderna de Composition API y <script setup>).
+* Framework: Vue 3 (implementando la sintaxis moderna de Composition API y script setup).
 * Lenguaje: TypeScript para la definición de interfaces y seguridad de tipos.
 * Base de Datos: Firebase Firestore (implementación de operaciones CRUD y onSnapshot para actualizaciones en tiempo real).
 * Diseño: CSS estándar con un enfoque de diseño limpio, minimalista y responsivo.
@@ -21,30 +21,42 @@ Para ejecutar este proyecto de manera local, es necesario contar con:
 ## Instrucciones de Instalación y Configuración
 
 1. Clonar el repositorio en su máquina local:
+   ```bash
    git clone https://github.com/alejo000111/mvt-prueba
    cd mvt-prueba
+   ```
 
 2. Instalar las dependencias del proyecto:
-  npm install
+   ```bash
+   npm install
+   ```
 
 3. Configurar la conexión a Firebase:
 Crear un archivo llamado "firebase.ts" dentro de la carpeta "src". En este archivo, es necesario inicializar la aplicación de firebase con sus propias credenciales de proyecto y exportar el servicio de Firestore (variable db).
 
 4. Ejecutar el servidor de desarrollo:
-  npm run dev
+   ```bash
+   npm run dev
+   ```
 
 ## Instrucciones de Construcción y Despliegue
 
 Este proyecto está configurado para ser desplegado en Firebase Hosting.
 
 1. Para compilar la aplicación y prepararla para producción, ejecute:
-  npm run build
-Este comando generará una carpeta llamada "dist" que contiene los archivos optimizados.
+   ```bash
+   npm run build
+   ```
+   Este comando generará una carpeta llamada "dist" que contiene los archivos optimizados.
 
 2. Para desplegar la aplicación, utilice las herramientas de línea de comandos de Firebase:
-  firebase login
-  firebase init hosting
-Asegurar que durante la configuración esté seleccionada la carpeta "dist" como su directorio público
+   ```bash
+   firebase login
+   firebase init hosting
+   ```
+   Asegurar que durante la configuración esté seleccionada la carpeta "dist" como su directorio público
 
 3. Finalmente suba los archivos a producción
-  firebase deploy
+   ```bash
+   firebase deploy
+   ```
