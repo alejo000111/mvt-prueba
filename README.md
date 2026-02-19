@@ -30,11 +30,22 @@ Para ejecutar este proyecto de manera local, es necesario contar con:
    ```bash
    npm install
    ```
+3. Configuración de Variables de Entorno:
+Crear un archivo llamado .env en la raiz del proyecto y configure las siguientes variables con sus credenciales de Firebase:
+   ```bash
+   VITE_FIREBASE_API_KEY=su_api_key
+   VITE_FIREBASE_AUTH_DOMAIN=su_auth_domain
+   VITE_FIREBASE_PROJECT_ID=su_project_id
+   VITE_FIREBASE_STORAGE_BUCKET=su_storage_bucket
+   VITE_FIREBASE_MESSAGING_SENDER_ID=su_sender_id
+   VITE_FIREBASE_APP_ID=su_app_id
+   VITE_FIREBASE_MEASUREMENT_ID=su_measurement_id
+   ```
 
-3. Configurar la conexión a Firebase:
+4. Configurar la conexión a Firebase:
 Crear un archivo llamado "firebase.ts" dentro de la carpeta "src". En este archivo, es necesario inicializar la aplicación de firebase con sus propias credenciales de proyecto y exportar el servicio de Firestore (variable db).
 
-4. Ejecutar el servidor de desarrollo:
+5. Ejecutar el servidor de desarrollo:
    ```bash
    npm run dev
    ```
